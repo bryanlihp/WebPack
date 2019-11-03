@@ -10,5 +10,22 @@ module.exports = {
         contentBase: './public',
         historyApiFallback: true,
         inline:true
+    },
+    module :{
+        rules: [
+            {
+                test: /(\.jsx|\.js)$/,
+                use: {
+                    loader: 'babel-loader',
+                    options:{
+                        presets: [
+                            "@babel/preset-env",
+                            "@babel/preset-react"
+                        ]
+                    }
+                },
+                exclude: /node_models/
+            }
+        ]
     }
 }
