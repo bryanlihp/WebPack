@@ -27,7 +27,11 @@ module.exports = {
                         loader: "style-loader" // so that we can add all compiled style to the generated page
                     },
                     {
-                        loader: "css-loader"   // so that we can use import... and url(...) to inlcude css files
+                        loader: "css-loader",   // so that we can use import... and url(...) to inlcude css files
+                        options:{
+                            modules: true
+                        }
+
                     }
                 ]
             }
